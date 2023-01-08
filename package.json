@@ -1,0 +1,274 @@
+{
+  "name": "aleoedge",
+  "displayName": "Aleo Edge",
+  "description": "",
+  "version": "0.1.0",
+  "author": "Aleo Edge",
+  "publisher": "Build Hackathon",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onLanguage:markdown",
+    "*",
+    "onCommand:aleoedge.formatcode",
+    "onCommand:aleoedge.securecode",
+    "onCommand:aleoedge.commentcode",
+    "onCommand:aleoedge.lintcode"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "aleoedge.formatcode",
+        "title": "Aleo: Format Code"
+      },
+      {
+        "command": "aleoedge.securecode",
+        "title": "Aleo: Secure Code"
+      },
+      {
+        "command": "aleoedge.commentcode",
+        "title": "Aleo: Comment Code"
+      },
+      {
+        "command": "aleoedge.lintcode",
+        "title": "Aleo: Lint Code"
+      },
+      {
+        "command": "aleoedge.createNote",
+        "title": "Aleo Wiki: Create Note",
+        "enablement": "!commentIsEmpty"
+      },
+      {
+        "command": "aleoedge.replyNote",
+        "title": "Aleo Wiki: Reply Note",
+        "enablement": "!commentIsEmpty"
+      },
+      {
+        "command": "aleoedge.startDraft",
+        "title": "Aleo Wiki: Start Draft"
+      },
+      {
+        "command": "aleoedge.finishDraft",
+        "title": "Aleo Wiki: Finish Draft"
+      },
+      {
+        "command": "aleoedge.deleteNoteComment",
+        "title": "Aleo Wiki: Delete Note Comment",
+        "icon": {
+          "dark": "resources/edit_inverse.svg",
+          "light": "resources/edit.svg"
+        }
+      },
+      {
+        "command": "aleoedge.deleteNote",
+        "title": "Aleo Wiki: Delete Note",
+        "icon": {
+          "dark": "resources/edit_inverse.svg",
+          "light": "resources/edit.svg"
+        }
+      },
+      {
+        "command": "aleoedge.cancelsaveNote",
+        "title": "Aleo Wiki: Cancel Save Note"
+      },
+      {
+        "command": "aleoedge.saveNote",
+        "title": "Aleo Wiki: Save Note"
+      },
+      {
+        "command": "aleoedge.editNote",
+        "title": "Aleo Wiki: Edit Note",
+        "icon": {
+          "dark": "resources/edit_inverse.svg",
+          "light": "resources/edit.svg"
+        }
+      },
+      {
+        "command": "aleoedge.dispose",
+        "title": "Aleo Wiki: Remove all notes"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "aleoedge.createNote",
+          "when": "false"
+        },
+        {
+          "command": "aleoedge.replyNote",
+          "when": "false"
+        },
+        {
+          "command": "aleoedge.deleteNote",
+          "when": "false"
+        },
+        {
+          "command": "aleoedge.deleteNoteComment",
+          "when": "false"
+        }
+      ],
+      "comments/commentThread/title": [
+        {
+          "command": "aleoedge.deleteNote",
+          "group": "navigation",
+          "when": "commentController == comment-sample && !commentThreadIsEmpty"
+        }
+      ],
+      "comments/commentThread/context": [
+        {
+          "command": "aleoedge.createNote",
+          "group": "inline",
+          "when": "commentController == comment-sample && commentThreadIsEmpty"
+        },
+        {
+          "command": "aleoedge.replyNote",
+          "group": "inline",
+          "when": "commentController == comment-sample && !commentThreadIsEmpty"
+        },
+        {
+          "command": "aleoedge.startDraft",
+          "group": "inline",
+          "when": "commentController == comment-sample && commentThreadIsEmpty"
+        },
+        {
+          "command": "aleoedge.finishDraft",
+          "group": "inline",
+          "when": "commentController == comment-sample && commentThread == draft"
+        }
+      ],
+      "comments/comment/title": [
+        {
+          "command": "aleoedge.editNote",
+          "group": "group@1",
+          "when": "commentController == comment-sample"
+        },
+        {
+          "command": "aleoedge.deleteNoteComment",
+          "group": "group@2",
+          "when": "commentController == comment-sample && comment == canDelete"
+        }
+      ],
+      "comments/comment/context": [
+        {
+          "command": "aleoedge.cancelsaveNote",
+          "group": "inline@1",
+          "when": "commentController == comment-sample"
+        },
+        {
+          "command": "aleoedge.saveNote",
+          "group": "inline@2",
+          "when": "commentController == comment-sample"
+        }
+      ]
+    },
+    "languages": [
+      {
+        "id": "aleo",
+        "aliases": [
+          "Aleo",
+          "aleo"
+        ],
+        "extensions": [
+          ".aleo"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "aleo",
+        "scopeName": "source.aleo",
+        "path": "./syntaxes/Aleo.tmLanguage.json"
+      }
+    ],
+    "themes": [
+      {
+        "label": "Aleo instructions syntax",
+        "uiTheme": "vs-dark",
+        "path": "./themes/Aleo-color-theme.json"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "author generator configuration",
+      "properties": {
+        "author-generator.author": {
+          "type": "string",
+          "default": "[author]",
+          "description": "author name"
+        },
+        "author-generator.email": {
+          "type": "string",
+          "default": "[example@mail.com]",
+          "description": "email address"
+        },
+        "author-generator.dateFormat": {
+          "type": "string",
+          "default": "YYYY-MM-DD HH:mm:ss",
+          "description": "date format string based on moment.js"
+        },
+        "author-generator.updateOnSave": {
+          "type": "boolean",
+          "default": false,
+          "description": "trigger updateInfo on save"
+        }
+      }
+  }
+},
+  "keywords": [
+    "aleo",
+    "leo"
+  ],
+  "galleryBanner": {
+    "color": "#931CFF",
+    "theme": "dark"
+  },
+  
+  "markdown": "github",
+  "qna": "marketplace",
+  "extensionPack": [],
+  "extensionDependencies": [],
+  "extensionKind": [
+    "ui",
+    "workspace"
+  ],
+  "icon": "icons/leo.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/paladinschamp29/Aleo-Edge"
+  },
+ 
+  "homepage": "https://www.aleo.org/",
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/glob": "^8.0.0",
+    "@types/mocha": "^9.1.0",
+    "@types/node": "16.11.7",
+    "@types/vscode": "^1.71.0",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "@vscode/test-electron": "^2.2.0",
+    "eslint": "^8.26.0",
+    "glob": "^8.0.3",
+    "mocha": "^9.2.1",
+    "typescript": "^4.8.4"
+  },
+  "dependencies": {
+    "moment": "^2.29.4",
+    "vscode-languageserver": "^8.0.2",
+    "vscode-languageserver-textdocument": "^1.0.8"
+  }
+}
+
