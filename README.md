@@ -11,7 +11,7 @@ We have full syntax highlighting and added 10 powerful features.
 * The third set is about code predictions along with aleo intelligence.
 * The fourth set is about linting for secure coding along with proper coding guide lines.
 * The 5th set is about inline help, as we hover on aleo keywords.
-
+![]https://github.com/paladinschamp29/Aleo-Edge/blob/main/formatcode.gif
 
 
 ## Running the Sample
