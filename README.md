@@ -30,9 +30,9 @@ The code is developed as part of hackathon and we require 1-2 weeks of stabiliza
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.1.0
 
-Initial release of ...
+Initial release of Build-Hackathon.aleoedge v0.1.0.
 
 
 ## Following extension guidelines
