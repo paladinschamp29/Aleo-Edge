@@ -12,7 +12,7 @@ We have full syntax highlighting and added 10 powerful features.
 * The fourth set is about linting for secure coding along with proper coding guide lines.
 * The 5th set is about inline help, as we hover on aleo keywords.
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/formatcode.gif)
-![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/file header.gif)
+![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/file%20header.gif)
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/inline comment.gif)
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/linting code.gif)
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/secure%20code.gif.gif)
