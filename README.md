@@ -24,7 +24,7 @@ We have full syntax highlighting and added 10 powerful features.
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+The code is developed as part of hackathon and we require 1-2 weeks of stabilization.
 
 ## Release Notes
 
