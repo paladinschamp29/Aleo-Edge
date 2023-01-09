@@ -1,32 +1,26 @@
-# aleosecureext README
+# Aleo Edge README
+
+Aleo Edge is an intelligent AI powered extension to Visual Studio code for delivering an enhanced, secure, in-line help experience to the Aleo developer.
 
 
 ## Features
 
-Write about 5 features from our video content
+We have full syntax highlighting and added 10 powerful features.
+The first set is formatting the code with tabs and spaces and adding extra lines before code blocks.
+The second set is about adding automated file headers and a  wiki type inline commenting.
+The third set is about code predictions along with aleo intelligence.
+The fourth set is about linting for secure coding along with proper coding guide lines.
+The 5th set is about inline help, as we hover on aleo keywords.
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
 
-For example if there is an image subfolder under your extension project workspace:
 
-\!\[feature X\]\(images/feature-x.png\)
+## Running the Sample
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+Run npm install in terminal to install dependencies
+Run the Launch Extension target in the Debug View. This will:
+Start a task npm: watch to compile the code
+Run the extension in a new VS Code window
 
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
 
 ## Known Issues
 
@@ -40,15 +34,6 @@ Users appreciate release notes as you update your extension.
 
 Initial release of ...
 
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
-
----
 
 ## Following extension guidelines
 
