@@ -15,7 +15,7 @@ We have full syntax highlighting and added 10 powerful features.
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/file header.gif)
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/inline comment.gif)
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/linting code.gif)
-![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/secure code.gif)
+![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/secure%20code.gif.gif)
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/code completion.gif)
 ![](https://github.com/paladinschamp29/Aleo-Edge/blob/main/hover.gif)
 
