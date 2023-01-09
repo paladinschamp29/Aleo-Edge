@@ -6,20 +6,20 @@ Aleo Edge is an intelligent AI powered extension to Visual Studio code for deliv
 ## Features
 
 We have full syntax highlighting and added 10 powerful features.
-*The first set is formatting the code with tabs and spaces and adding extra lines before code blocks.
-*The second set is about adding automated file headers and a  wiki type inline commenting.
-*The third set is about code predictions along with aleo intelligence.
-*The fourth set is about linting for secure coding along with proper coding guide lines.
-*The 5th set is about inline help, as we hover on aleo keywords.
+* The first set is formatting the code with tabs and spaces and adding extra lines before code blocks.
+* The second set is about adding automated file headers and a  wiki type inline commenting.
+* The third set is about code predictions along with aleo intelligence.
+* The fourth set is about linting for secure coding along with proper coding guide lines.
+* The 5th set is about inline help, as we hover on aleo keywords.
 
 
 
 ## Running the Sample
 
-*Run npm install in terminal to install dependencies
-*Run the Launch Extension target in the Debug View. This will:
-*Start a task npm: watch to compile the code
-*Run the extension in a new VS Code window
+* Run npm install in terminal to install dependencies
+* Run the Launch Extension target in the Debug View. This will:
+* Start a task npm: watch to compile the code
+* Run the extension in a new VS Code window
 
 
 ## Known Issues
